@@ -25,7 +25,8 @@ fetch(fileUrl)
   })
   .then(fileContent => {
     // Use the file content as needed
-    console.log(typeof fileContent);
+    const parsedObject = JSON.parse(fileContent);
+    console.log(parsedObject['key']);
   })
   .catch(error => {
     console.error('Error fetching the file:', error);
